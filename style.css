@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+    margin: 0 auto;
+    width: 375px;
+    min-height: 100vh;
+    background-color: hsl(0, 100%, 74%);
+}
+
+.wrapper {
+    background-image: url(./images/bg-intro-mobile.png);
+    background-repeat: repeat-y;
+    background-size: auto;
+    display: -webkit-flex;
+    flex-direction: column;
+}
+
+.description {
+    margin: 50px 15px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.text {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.form_wrapper {
+    margin: 0 15px 20px 15px;
+    display: -webkit-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.violet {
+    width: 100%;
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px 50px;
+    font-weight: 400;
+    box-shadow: rgba(0, 0, 0, 0.432) 0px 5px 0px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+form {
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.432) 0px 5px 0px;
+
+}
+
+input {
+    margin-bottom: 15px;
+    width: 100%;
+    line-height: 40px;
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+
+}
+
+
+.form_submit {
+    display: block;
+    background-color: hsl(154, 59%, 51%);
+}
+
+.footer_text {
+    margin: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    color: hsl(246, 25%, 77%)
+}
+
+.terms {
+    color: red;
+    text-decoration: none;
+}
