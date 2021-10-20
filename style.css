@@ -70,7 +70,7 @@ form {
 }
 
 input {
-    margin-bottom: 15px;
+    margin-top: 15px;
     padding-left: 15px;
     width: 100%;
     line-height: 40px;
@@ -79,27 +79,45 @@ input {
     color: black;
 }
 
+input.error {
+    border-color: hsl(0, 100%, 74%);
+}
+
 input::placeholder {
     font-size: 12px;
     color: hsl(246, 25%, 77%);
 }
 
-.error_icon {
+.input_wrapper {
     position: relative;
-    top: -47px;
-    right: -130px;
 }
 
-.error {
-    margin-top: -30px;
+.error_icon {
+    display: none;
+    position: absolute;
+    top: 23px;
+    right: 10px;
+}
+
+.error_icon.show {
+    display: initial;
 }
 
 .red {
-    color: red;
-    font-size: 12px;
+    display: none;
+    color: hsl(0, 100%, 74%);
+    text-align: right;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.red.show {
+    display: block;
+
 }
 
 .form_submit {
+    margin-top: 20px;
     display: block;
     width: 100%;
     height: 40px;
@@ -121,6 +139,6 @@ input::placeholder {
 }
 
 .terms {
-    color: red;
+    color: hsl(0, 100%, 74%);
     text-decoration: none;
 }

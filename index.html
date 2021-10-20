@@ -23,24 +23,33 @@
         <div class="form_wrapper">
             <h2 class="violet"><span class="bold">Try it free 7 days </span>then $20/mo. thereafter </h2>
             <form action="/">
-                <input class="first_name" type="text" placeholder="First name">
-                <img class="error_icon" src="./images/icon-error.svg" alt="error">
-                <p class="red first_name_err">First name cannot be empty</p>
-                <input class="last_name" type="text" placeholder="Last name">
-                <img class="error_icon" src="./images/icon-error.svg" alt="error">
-                <p class="red last_name_err">Last name cannot be empty</p>
-                <input class="email" type="email" placeholder="Email adress">
-                <img class="error_icon" src="./images/icon-error.svg" alt="error">
-                <p class="red email_err">Looks like this is not an email</p>
-                <input class="password" type="password" placeholder="Password">
-                <img class="error_icon" src="./images/icon-error.svg" alt="error">
-                <p class="red password_err">Password cannot be empty</p>
+                <div class="input_wrapper">
+                    <input class="first_name" type="text" placeholder="First name">
+                    <img class="error_icon first_name_err" src="./images/icon-error.svg" alt="error">
+                    <p class="red first_name_err">First name cannot be empty</p>
+                </div>
+                <div class="input_wrapper">
+                    <input class="last_name" type="text" placeholder="Last name">
+                    <img class="error_icon last_name_err" src="./images/icon-error.svg" alt="error">
+                    <p class="red last_name_err">Last name cannot be empty</p>
+                </div>
+                <div class="input_wrapper">
+                    <input class="email" type="email" placeholder="Email adress">
+                    <img class="error_icon email_err" src="./images/icon-error.svg" alt="error">
+                    <p class="red email_err">Looks like this is not an email</p>
+                </div>
+                <div class="input_wrapper">
+                    <input class="password" type="password" placeholder="Password">
+                    <img class="error_icon password_err" src="./images/icon-error.svg" alt="error">
+                    <p class="red password_err">Password cannot be empty</p>
+                </div>
                 <button class="form_submit" type="submit">Claim your free trial </button>
                 <p class="footer_text">By clicking the button, you are agreeing to our <a class="terms" href="/">Terms
                         and Services</a></p>
             </form>
         </div>
     </main>
+    <script src="main.js"></script>
 </body>
 
 </html>
