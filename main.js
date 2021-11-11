@@ -18,42 +18,57 @@ const passwordErrMessage = document.querySelector('p.password_err')
 
 const formValid = () => {
 
-    // let first_nameSuccess = false
-    // let last_nameSuccess = false
-    // let emailSuccess = false
-    // let passwordSuccess = false
+    const conditionsArray = {
+        first_nameValid: false,
+        last_nameValid: false,
+        emailValid: false,
+        passwordValid: false,
+    }
 
-    // const first_nameValid = () => {
-    //     if () {
-    //         first_nameSuccess = true
-    //     }
-    // }
-
-    // const last_nameValid = () => {
-    //     if (last_name.value.length > 0) {
-    //         last_nameSuccess = true
-    //     }
-    // }
-
-    // const emailValid = () => {
-    //     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
-    //         emailSuccess = true
-    //     }
-    // }
-
-    // const passwordValid = () => {
-    //     if (password.value.length > 0) {
-    //         passwordSuccess = true
-    //     }
-    // }
-
-
-
-    if (!first_name.value.length > 0) {
+    if (first_name.value.length > 0) {
+        first_nameErrIcon.classList.remove('show')
+        first_nameErrMessage.classList.remove('show')
+        conditionsArray.first_nameValid = true
+    } else {
         first_nameErrIcon.classList.add('show')
         first_nameErrMessage.classList.add('show')
-    } else if (first_name.value.length > 0 && )
+        conditionsArray.first_nameValid = false
+    }
+    if (last_name.value.length > 0) {
+        last_nameErrIcon.classList.remove('show')
+        last_nameErrMessage.classList.remove('show')
+        conditionsArray.last_nameValid = true
+    } else {
+        last_nameErrIcon.classList.add('show')
+        last_nameErrMessage.classList.add('show')
+        conditionsArray.last_nameValid = false
+    }
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+        emailErrIcon.classList.remove('show')
+        emailErrMessage.classList.remove('show')
+        conditionsArray.emailValid = true
+    } else {
+        emailErrIcon.classList.add('show')
+        emailErrMessage.classList.add('show')
+        conditionsArray.emailValid = false
+    }
+    if (password.value.length > 0) {
+        passwordErrIcon.classList.remove('show')
+        passwordErrMessage.classList.remove('show')
+        conditionsArray.passwordValid = true
+    } else {
+        passwordErrIcon.classList.add('show')
+        passwordErrMessage.classList.add('show')
+        conditionsArray.passwordValid = false
+    }
 
+    if (conditionsArray.first_nameValid && conditionsArray.last_nameValid && conditionsArray.emailValid && conditionsArray.passwordValid) {
+        first_name.value = ""
+        last_name.value = ""
+        email.value = ""
+        password.value = ""
+        // send data 
+    }
 }
 
 
